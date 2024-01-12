@@ -24,9 +24,30 @@ class HomeViewController: UIViewController {
         homeFeedTable.delegate = self
         homeFeedTable.dataSource = self
         
+        configureNavBar()
         
-        // The main header for our home page 
-        homeFeedTable.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 450))
+        // The main header for our home page
+        let headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 450))
+        homeFeedTable.tableHeaderView = headerView
+    }
+    
+    
+    // Implementing the Netflix Logo Icon in our Top Navigation bar
+    private func configureNavBar(){
+        var image = UIImage(named: "netflixLogo")
+        
+        // making sure image does not change the originality, forcing
+        image = image?.withRenderingMode(.alwaysOriginal)
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: image,  style: .done, target: self, action: nil)
+
+        // Mutiple items to the right side of the top navigation
+        navigationItem.rightBarButtonItems = [
+            UIBarButtonItem(image: UIImage(systemName: "person"), style: .done, target: self, action: nil),
+            UIBarButtonItem(image: UIImage(systemName: "play.rectangle"), style: .done, target: self, action: nil)
+        ]
+        
+        navigationController?.navigationBar.tintColor = .white
     }
     
     override func viewDidLayoutSubviews() {

@@ -23,9 +23,9 @@ class APICaller {
     
     
     // Decoding the trending movies properties
-    func getTrendingMovies(completion: @escaping (Result<[Movie], Error>) -> Void) {
+    func getTrendingMovies(completion: @escaping (Result<[Title], Error>) -> Void) {
         
-        guard let url = URL(string: "\(Constants.base_URL)/3/trending/all/day?api_key=\(Constants.API_KEY)")
+        guard let url = URL(string: "\(Constants.base_URL)/3/trending/movie/day?api_key=\(Constants.API_KEY)")
         else {return}
         
         let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, _, error in
@@ -34,10 +34,94 @@ class APICaller {
             }
             
             do {
-                let results = try JSONDecoder().decode(TrendingMoviesResponse.self, from: data)
+                let results = try JSONDecoder().decode(TitleResponse.self, from: data)
                 completion(.success(results.results))
             }catch {
-                completion(.failure(error))
+                completion(.failure(APIError.failedTogetData))
+            }
+        }
+        task.resume()
+    }
+    
+    
+    
+    // Decoding the trending tv
+    func getTrendingTv(completion: @escaping (Result<[Title], Error>) -> Void) {
+        
+        guard let url = URL(string: "\(Constants.base_URL)/3/trending/tv/day?api_key=\(Constants.API_KEY)")
+        else {return}
+        
+        let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, _, error in
+            guard let data = data, error == nil else {
+                return
+            }
+            do {
+                let results = try JSONDecoder().decode(TitleResponse.self, from: data)
+                completion(.success(results.results))
+            }catch {
+                completion(.failure(APIError.failedTogetData))
+            }
+        }
+        task.resume()
+    }
+    
+    
+    // Decoding upcoming Movies
+    func getUpcomingMovies(completion: @escaping (Result<[Title], Error>) -> Void) {
+        
+        guard let url = URL(string: "\(Constants.base_URL)/3/movie/upcoming?api_key=\(Constants.API_KEY)")
+        else {return}
+        
+        let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, _, error in
+            guard let data = data, error == nil else {
+                return
+            }
+            do {
+                let results = try JSONDecoder().decode(TitleResponse.self, from: data)
+                completion(.success(results.results))
+            }catch {
+                completion(.failure(APIError.failedTogetData))
+            }
+        }
+        task.resume()
+    }
+    
+    // Decoding popular Movies
+    func getPopularMovies(completion: @escaping (Result<[Title], Error>) -> Void) {
+        
+        guard let url = URL(string: "\(Constants.base_URL)/3/movie/upcoming?api_key=\(Constants.API_KEY)")
+        else {return}
+        
+        let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, _, error in
+            guard let data = data, error == nil else {
+                return
+            }
+            do {
+                let results = try JSONDecoder().decode(TitleResponse.self, from: data)
+                completion(.success(results.results))
+            }catch {
+                completion(.failure(APIError.failedTogetData))
+            }
+        }
+        task.resume()
+    }
+    
+    
+    // Decoding Top Rated Movies
+    func getTopRatedMovies(completion: @escaping (Result<[Title], Error>) -> Void) {
+        
+        guard let url = URL(string: "\(Constants.base_URL)/3/movie/upcoming?api_key=\(Constants.API_KEY)")
+        else {return}
+        
+        let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, _, error in
+            guard let data = data, error == nil else {
+                return
+            }
+            do {
+                let results = try JSONDecoder().decode(TitleResponse.self, from: data)
+                completion(.success(results.results))
+            }catch {
+                completion(.failure(APIError.failedTogetData))
             }
         }
         task.resume()

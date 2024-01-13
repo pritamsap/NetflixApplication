@@ -29,6 +29,7 @@
 		9C68A5DA2B51E3C300D03911 /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C68A5D92B51E3C300D03911 /* TitleTableViewCell.swift */; };
 		9C68A5DC2B51E84700D03911 /* TitleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C68A5DB2B51E84700D03911 /* TitleViewModel.swift */; };
 		9C68A5DE2B522DE500D03911 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C68A5DD2B522DE500D03911 /* SearchResultsViewController.swift */; };
+		9C68A5E22B52D1C600D03911 /* YoutubeSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C68A5E12B52D1C600D03911 /* YoutubeSearchResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		9C68A5D92B51E3C300D03911 /* TitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
 		9C68A5DB2B51E84700D03911 /* TitleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewModel.swift; sourceTree = "<group>"; };
 		9C68A5DD2B522DE500D03911 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
+		9C68A5E12B52D1C600D03911 /* YoutubeSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeSearchResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				9C68A5CC2B51A27C00D03911 /* Title.swift */,
+				9C68A5E12B52D1C600D03911 /* YoutubeSearchResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				9C68A5B82B4F619E00D03911 /* DownloadsViewController.swift in Sources */,
 				9C68A5CF2B51C35200D03911 /* Extensions.swift in Sources */,
 				9C68A5DA2B51E3C300D03911 /* TitleTableViewCell.swift in Sources */,
+				9C68A5E22B52D1C600D03911 /* YoutubeSearchResponse.swift in Sources */,
 				9C68A59D2B4F5E6F00D03911 /* AppDelegate.swift in Sources */,
 				9C68A59F2B4F5E6F00D03911 /* SceneDelegate.swift in Sources */,
 				9C68A5DC2B51E84700D03911 /* TitleViewModel.swift in Sources */,

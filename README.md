@@ -5,5 +5,5 @@ Netflix is a popular movie player where you can browser catalogs of movies and t
 
 
 
-![Local Image](./ScreenShots/Simulator Screenshot - iPhone 14 Plus - 2024-01-14 at 16.12.14.png)
+![NetflixAppScreenShots](./ScreenShots/MashedApp.png)
 

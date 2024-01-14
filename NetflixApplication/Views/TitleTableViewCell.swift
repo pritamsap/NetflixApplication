@@ -32,6 +32,7 @@ class TitleTableViewCell: UITableViewCell {
         imageView.contentMode = .scaleAspectFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.clipsToBounds = true
+        imageView.layer.cornerRadius = 5
         return imageView
     }()
     

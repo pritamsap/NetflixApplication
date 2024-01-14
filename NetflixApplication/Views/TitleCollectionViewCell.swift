@@ -16,6 +16,7 @@ class TitleCollectionViewCell: UICollectionViewCell {
         
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
+        imageView.layer.cornerRadius = 5
         return imageView
     }()
     

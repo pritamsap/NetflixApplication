@@ -9,7 +9,7 @@ Netflix is a popular movie player where you can browser catalogs of movies and t
 
 
 
-# APP Features 
+# App Features 
 
 - Browse Catalog of Upcoming Movies, Popular Movies & TV Shows, Trending Movies
 - Search through Movies & TV Shows

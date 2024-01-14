@@ -7,3 +7,13 @@ Netflix is a popular movie player where you can browser catalogs of movies and t
 
 ![NetflixAppScreenShots](./ScreenShots/MashedApp.png)
 
+
+
+# APP Features 
+
+- Browse Catalog of Upcoming Movies, Popular Movies & TV Shows, Trending Movies
+- Search through Movies & TV Shows
+- Click on any Movie & Tv Show to get more information and watch the trailer
+- Long press allows downloaded button to be visible which enables downlaoded content to be saved in Download section
+
+
